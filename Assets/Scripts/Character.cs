@@ -23,8 +23,9 @@ public class Character : MonoBehaviour {
         anim = GetComponent<Animator>();
     }
 	
-
+    
 	void Update () {
+        //Funcion para el moviemto en horizontal
         float move = Input.GetAxis("Horizontal");
         if (move != 0) {
             rb2d.transform.Translate(new Vector3(1, 0, 0) * move * speed * Time.deltaTime);
@@ -34,7 +35,7 @@ public class Character : MonoBehaviour {
         anim.SetFloat("Speed", Mathf.Abs(move));
 
         sr.flipX = !facingRight;
-
+        //Funcion para permitir saltar al personaje
         if (Input.GetButtonDown("Jump"))
         {
             RaycastHit2D raycast =

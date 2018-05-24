@@ -14,6 +14,7 @@ public class AreaEffector : MonoBehaviour {
 	}
 
     // Update is called once per frame
+    //Funcion para los efectos de particulas
     void Update() {
         time += Time.deltaTime;
 
